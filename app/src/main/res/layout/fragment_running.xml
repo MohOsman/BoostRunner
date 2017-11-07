@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:text="@string/start_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/map"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/start_button"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"/>
+
+    <Button
+        android:text="@string/stop_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/pause_button"
+        android:id="@+id/stop_button"
+        android:textSize="18sp"
+        android:background="#F44336"
+        android:textColor="#ffffffff"
+        android:layout_alignBottom="@+id/start_button"
+        android:layout_alignTop="@+id/start_button"/>
+
+    <Button
+        android:text="@string/pause_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause_button"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:background="#ffffff"
+        android:layout_marginEnd="28dp"
+        android:layout_alignBaseline="@+id/stop_button"
+        android:layout_alignBottom="@+id/stop_button"
+        android:layout_alignParentEnd="true"/>
+
+    <fragment android:id="@+id/map"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:layout_alignParentBottom="true"
+              android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/map"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/distance"
+                android:id="@+id/distance_label"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/distance_label"
+                android:textAllCaps="true"
+                android:id="@+id/distance_text_label"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="center"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caloris"
+                android:id="@+id/caloris_label"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caloris_label"
+                android:textAllCaps="true"
+                android:id="@+id/caloris_text_label"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:text="duration"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"/>
+
+    <TextView
+        android:id="@+id/stoptime_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:layout_above="@+id/duration_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

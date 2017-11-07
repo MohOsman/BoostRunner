@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:id="@+id/fab"
+        android:src="@drawable/ic_done_white_24dp"
+        app:layout_anchorGravity="bottom|right|end" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:titleTextColor="#ffffffff"
+            app:layout_scrollFlags="scroll|enterAlways"
+
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <fragment android:id="@+id/map_save"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="250dp"
+                  android:layout_below="@+id/toolbar2"
+             >
+
+        </fragment>
+                  
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/linearLayout3"
+            android:orientation="vertical"
+
+            android:layout_marginTop="13dp"
+            android:layout_below="@+id/map_save"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            >
+            >
+
+            <View android:background="#E0E0E0"
+                  android:layout_width = "match_parent"
+                  android:layout_height="1dp"
+                android:layout_marginTop="5dp"/>
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_timer_white_48dp"
+                     android:tint="@color/colorPrimary"
+                     android:layout_marginTop="10dp"
+
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45:13"
+                    android:id="@+id/total_duration"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DURATION"
+                    android:textSize="10sp"/>
+
+        </LinearLayout>
+
+        <View android:background="#E0E0E0"
+              android:layout_width = "match_parent"
+              android:layout_height="1dp"
+              android:layout_marginTop="10dp"
+            android:layout_below="@id/linearLayout3"
+            android:id="@+id/line_under"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/line_under"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linearLayout4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_directions_run_white_48dp"
+                    android:tint="@color/colorPrimary"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10,4 Km"
+                    android:id="@+id/total_distance"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISTANCE"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+            <View android:background="#E0E0E0"
+                  android:layout_width = "1dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fire2"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="452 Kcal"
+                    android:id="@+id/total_caloris"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CALORIS "
+                    android:textSize="10sp"
+                    />
+
+
+
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <View android:background="#E0E0E0"
+              android:layout_width = "match_parent"
+              android:layout_height="1dp"
+              android:layout_marginTop="10dp"
+              android:layout_below="@id/linearLayout4"
+              android:id="@+id/line_under2"/>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
